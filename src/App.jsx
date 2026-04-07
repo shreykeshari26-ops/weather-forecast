@@ -5,8 +5,8 @@ import WeatherCard from "./components/WeatherCard";
 import WeatherAnimation from "./components/WeatherAnimation";
 
 
-const API_KEY =
-  import.meta.env.VITE_OPENWEATHER_API_KEY || "c11299c9a42205553888ad3319c49131";
+
+  const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 const WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather";
 const FORECAST_URL = "https://api.openweathermap.org/data/2.5/forecast";
 
