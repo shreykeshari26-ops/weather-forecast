@@ -1,0 +1,77 @@
+.weather-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+}
+
+/* ☁️ CLOUD */
+.cloud {
+  position: relative;
+  width: 120px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* cloud bumps */
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 60px;
+  height: 60px;
+  top: -30px;
+  left: 10px;
+}
+
+.cloud::after {
+  width: 50px;
+  height: 50px;
+  top: -20px;
+  right: 10px;
+}
+
+/* 🌞 SUN */
+.sun {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffd93d, #ff9f1c);
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(255, 217, 61, 0.6);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 🌧️ RAIN */
+.rain-container {
+  position: relative;
+}
+
+.rain-container::before {
+  content: "🌧️";
+  font-size: 80px;
+}
+
+/* ⚡ THUNDER */
+.thunder {
+  font-size: 80px;
+  animation: flash 1s infinite;
+}
+
+/* ANIMATIONS */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
